@@ -6,13 +6,14 @@ function start()
 {
      recognition.start();
 } 
-recognition.onresult=function(event){
+recognition.onresult=function(event)
+{
     console.log(event);
     var Content=event.results[0][0].transcript;
     console.log(Content);
 
     if(Content=="selfie"){
-        console.log("taking selfie---");
+        console.log("Taking Selfie---");
         speak();
     }
 }
@@ -31,9 +32,8 @@ Webcam.set({
 
 
 
-function speak(){
-
-    
+function speak()
+{
     var synth = window.speechSynthesis;
     speak_data = "Selfie in 5 seconds";
 
